@@ -37,11 +37,15 @@ public class SVG {
     }
 
     public void addLine(int x1, int y1, int x2, int y2, StringBuilder svg) {
-        svg.append("<line x1=\"" + x1 + "\" y1=\"" + y1 + "\" x2=\"" + x2 + "\" y2=\"" + y2 + "\" style=\"stroke:#000000; stroke-width:2\" />");
+        svg.append("<line x1=\"" + x1 + "\" y1=\"" + y1 + "\" x2=\"" + x2 + "\" y2=\"" + y2 + "\" stroke=\"black\" />");
     }
 
     public void addRect(int x, int y, double height, double width, StringBuilder svg) {
         svg.append(String.format(rectTemplate, x, y, height, width));
+    }
+
+    public void addCircle(int x, int y, int radius, StringBuilder svg){
+        svg.append(" <circle cx=\""+ x +"\" cy=\"" + y + "\" r=\"" + radius + "\" stroke=\"red\" fill=\"transparent\" stroke-width=\"5\"/>");
     }
 
 }
