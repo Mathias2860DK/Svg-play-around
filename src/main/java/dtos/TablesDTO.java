@@ -58,6 +58,14 @@ public class TablesDTO {
         this.shape = shape;
     }
 
+    public void setPersons(List<PersonDTO> persons) {
+        this.persons = persons;
+    }
+
+    public List<PersonDTO> getPersons() {
+        return persons;
+    }
+
     @Override
     public String toString() {
         return "TablesDTO{" +

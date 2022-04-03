@@ -22,14 +22,21 @@ public class Main {
         Tables tables6 = new Tables(4,"square");
         Tables tables7 = new Tables(4,"square");
         Tables tables8 = new Tables(4,"square");
+        Tables tables9 = new Tables(2,"square");
+        Tables tables10 = new Tables(2,"square");
+        Tables tables11 = new Tables(2,"square");
+        Tables tables12 = new Tables(4,"square");
 
         Person person1 = new Person("test person 1");
         Person person2 = new Person("test person 2");
+        Person person3 = new Person("bo");
 
         user.addEvent(event);
         event.addTable(tables1);
         tables1.addPerson(person1);
         tables1.addPerson(person2);
+        tables1.addPerson(person3);
+        tables10.addPerson(person3);
 
         List<Tables> tablesList = new ArrayList<>();
         List<TablesDTO> tablesListDTO = new ArrayList<>();
@@ -41,6 +48,10 @@ public class Main {
         tablesList.add(tables6);
         tablesList.add(tables7);
         tablesList.add(tables8);
+        tablesList.add(tables9);
+        tablesList.add(tables10);
+        tablesList.add(tables11);
+        tablesList.add(tables12);
 
         for (Tables t : tablesList) {
             tablesListDTO.add(new TablesDTO(t));
